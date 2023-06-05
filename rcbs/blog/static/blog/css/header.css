@@ -1,0 +1,271 @@
+/* --------HEADER------------------------ */
+
+.wrapper-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    max-width: 1280px;
+    height: 150px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    max-width: 60%;
+    align-items: center;
+}
+
+.logo img {
+    width: 96px;
+}
+
+.logo-text {
+    text-align: center;
+    margin-left: 20px;
+    color: #03535e;
+}
+
+.logo-text h1 {
+    font-size: 32px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.registration {
+    width: 250px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.registration a {
+    color: #03535e;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.fl{
+    display: flex;
+    width: 370px;
+    height: 50px;
+    align-items:center;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+.form-inline .form-control.is-invalid {
+    border: 2px solid red;
+}
+
+.input-search {
+    width: 227px;
+    height: 35px;
+}
+
+.btn-search {
+    color: white;
+    background-color:#2a926c;
+    width: 116px;
+    height: 45px;
+    border-radius: 5px;
+}
+
+/* ------------NAV------------------ */
+
+nav {
+    width: 100%;
+    margin: 0 auto;
+    background: linear-gradient(to right, #03535e, #2a926c);
+}
+
+.menu {
+    max-width: 1280px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.main-menu {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li.menu-item {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.menu-item {
+    width: 100%;
+    margin: 0;
+    padding: 10px 10px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+.menu-item a:hover {
+    color: #ffb900;
+}
+
+.menu-item a{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.menu-active {
+    /* background: #167265; */
+    font-size: 24px;
+    font-weight: bold;;
+}
+
+.humburger {
+    display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    .header {
+        max-width: 760px;
+        height: 200px;
+    }
+
+    .logo-text h1 {
+        font-size: 26px;
+    }
+
+    .fl{
+        width: 280px;
+        height: 50px;
+    }
+
+    .input-search {
+        width: 180px;
+        height: 35px;
+    }
+
+    .btn-search {
+        width: 90px;
+        height: 45px;
+    }
+
+    .menu {
+        max-width: 760px;
+    }
+
+    .menu-item {
+        padding: 10px 10px;
+        font-size: 16px;
+        color: white;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .wrapper-header {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .header {
+        max-width: 320px;
+        height: 250px;
+        flex-direction: column;
+
+    }
+
+    .logo-text h1 {
+        font-size: 18px;
+    }
+
+    .registration {
+        display: none;
+    }
+
+    .fl{
+        width: 280px;
+        height: 100px;
+        flex-direction: column;
+    }
+
+    .btn {
+        margin-bottom: 10px;
+    }
+
+    .menu {
+        /*display: none;*/
+    }
+
+    .main-menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 50%;
+        height: 100vh;
+        padding: 20px 15px;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, .8);
+        transition: 0.6s all;
+    }
+
+    .main-menu-active {
+        left: 0;
+    }
+
+    .menu-item {
+        padding-right: 0;
+        border: none;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 20%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 25px;
+    }
+
+    .line {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: #0b2e13;
+        margin-bottom: 5px;
+        transition: 0.5s all;
+    }
+
+    .hamburger-active span {
+        margin-bottom: -2px;
+    }
+
+    .hamburger-active span:first-child {
+        transform: translateY(3px) rotate(-45deg);
+    }
+
+    .hamburger-active span:nth-child(2) {
+        display: none;
+    }
+
+    .hamburger-active span:nth-child(3) {
+        transform: translateY(3px) rotate(45deg);
+    }
+}

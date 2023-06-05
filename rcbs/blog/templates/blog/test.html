@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'blog/css/normalize.css' %}">
+
+
+    <link href="../../assets/front/css/bootstrap.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Magra:wght@400;700&family=Red+Hat+Text:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+    <!-- <link rel="stylesheet" href="../../css/style.css"> -->
+<!--    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">-->
+    <link rel="stylesheet" href="{% static 'blog/css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/links.css' %}">
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
+
+    <title>TEST</title>
+</head>
+
+<body>
+
+<div class="wrapper-header">
+    <div class="hamburger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+    </div>
+    
+
+        <header class="header">
+    
+            <div class="logo">
+                <div class="logo-ico">
+                    <a href="#"><img src="{% static 'blog/images/icon/logo.png' %}" alt="logo"></a>
+                </div>
+                <div class="logo-text">
+                    <h1>Государственное учреждение культуры<br/> "Речицкая районная сеть библиотек"</h1>
+                </div>
+            </div>
+            <div class="block">
+                <div class="registration">
+
+                    <div><a href="">Войти</a></div>
+ 
+                    <div><a href="">Регистрация</a></div>
+
+                </div>
+                <form class="form-inline fl" method="get" action="">
+                    <input class="input-search" name="s" class="form-control mr-sm-2 @error('s') is-invalid @enderror" type="text"
+                           placeholder="ПОИСК ПО САЙТУ" required>
+                    <button class="btn-search btn-outline-success my-2 my-sm-0" type="submit">Искать</button>
+                </form>
+            </div>
+        </header>
+
+    
+    <nav>
+        <div class="menu">
+            <ul class="main-menu">
+    
+                <li class="menu-item @if(Request::is('/')) menu-active @endif"><a href="/">Главная</a></li>
+    
+                <li class="menu-item @if(Request::is('/')) menu-active @endif"><a href="/about">О нас</a></li>
+    
+                <li class="menu-item @if(Request::is('/')) menu-active @endif"><a href="">Ресурсы</a></li>
+    
+                <li class="menu-item @if(Request::is('/')) menu-active @endif"><a href="/services">Услуги</a></li>
+    
+                <li class="menu-item @if(Request::is('/')) menu-active @endif"><a
+                        href="">Краеведение</a></li>
+    
+                <li class="menu-item @if(Request::is('/')) menu-active @endif"><a href="/readers">Читателям</a></li>
+    
+                <li class="menu-item @if(Request::is('/')) menu-active @endif"><a href="/siteMap">Карта сайта</a></li>
+    
+            </ul>
+    
+    
+        </div>
+    
+        <style>
+            .fl{
+                display: flex;
+            }
+            .form-inline .form-control.is-invalid {
+                border: 2px solid red;
+            }
+        </style>
+    </nav>
+    
+</div>
+
+<div class="main-wrapper">
+
+    <main class="main">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica1.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica2.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica3.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica5.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica6.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica7.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica8.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica9.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica10.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica11.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica12.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica13.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica14.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica15.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica16.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica17.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica18.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica19.jpg' %}" alt=""></div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <div class="swiper-scrollbar"></div>
+        </div> 
+
+        <div class="wrapper-links">
+            <div class="links-container">
+                <ul class="links">
+                    <li class="links-item"><a href="http://86.57.133.109:8080/alis/StartEK/index.php" target="_blank"><img
+                                src="{% static 'blog/images/icon/Links/ЭК 2.png' %}" alt="">
+                            <div>Электорнный каталог</div>
+                        </a></li>
+                    <li class="links-item"><a href=""><img src="{% static 'blog/images/icon/Links/Анонс..png' %}" alt="">
+                            <div>Анонсы мероприятий</div>
+                        </a></li>
+                    <li class="links-item"><a href=""><img src="{% static 'blog/images/icon/Links/В соц. сети.png' %}" alt="">
+                            <div>Библиотеки в социальных медиа</div>
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-content-wrapper">
+            <div class="wrapper-content">
+
+                    <div class="cards">
+
+<!--                            <div class="cards__item">-->
+<!--                                <div class="card">-->
+<!--                                    <div class="card__image"><a href="" target="_blank"><img src="" alt=""></a></div>-->
+<!--                                    <div class="card__content">-->
+<!--                                        <div class="card__title"><a href="" target="_blank"> $post->title </a></div>-->
+<!--                                        <p class="card__text"> $post->description  </p>-->
+
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="cards__item">-->
+<!--                                <div class="card">-->
+<!--                                    <div class="card__image"><a href="" target="_blank"><img src="" alt=""></a></div>-->
+<!--                                    <div class="card__content">-->
+<!--                                        <div class="card__title"><a href="" target="_blank"> $post->title </a></div>-->
+<!--                                        <p class="card__text"> $post->description  </p>-->
+
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="cards__item">-->
+<!--                                <div class="card">-->
+<!--                                    <div class="card__image"><a href="" target="_blank"><img src="" alt=""></a></div>-->
+<!--                                    <div class="card__content">-->
+<!--                                        <div class="card__title"><a href="" target="_blank"> $post->title </a></div>-->
+<!--                                        <p class="card__text"> $post->description  </p>-->
+
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="cards__item">-->
+<!--                                <div class="card">-->
+<!--                                    <div class="card__image"><a href="" target="_blank"><img src="" alt=""></a></div>-->
+<!--                                    <div class="card__content">-->
+<!--                                        <div class="card__title"><a href="" target="_blank"> $post->title </a></div>-->
+<!--                                        <p class="card__text"> $post->description </p>-->
+
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="cards__item">-->
+<!--                                <div class="card">-->
+<!--                                    <div class="card__image"><a href="" target="_blank"><img src="" alt=""></a></div>-->
+<!--                                    <div class="card__content">-->
+<!--                                        <div class="card__title"><a href="" target="_blank"> $post->title </a></div>-->
+<!--                                        <p class="card__text"> $post->description  </p>-->
+
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="cards__item">-->
+<!--                                <div class="card">-->
+<!--                                    <div class="card__image"><a href="" target="_blank"><img src="" alt=""></a></div>-->
+<!--                                    <div class="card__content">-->
+<!--                                        <div class="card__title"><a href="" target="_blank"> $post->title </a></div>-->
+<!--                                        <p class="card__text"> $post->description  </p>-->
+
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+                    </div>
+
+<!--                <hr class="invis">-->
+                <div class="pagination">
+   
+
+                </div>
+<!--                <hr class="invis">-->
+            </div>
+
+            <div class="content-sidebar">
+                <div class="sidebar-banners">
+                    <img src="{% static 'blog/images/image/banner/Флаг_и_герб.jpg' %}" alt="">
+                    <img src="{% static 'blog/images/image/banner/2022_God_history_memory1.jpg' %}" alt="">
+                </div>
+            
+                <div class="widget">
+                    <h2 class="widget-title">Популярные статьи</h2>
+                    <div class="blog-list-widget">
+                        <div class="list-group">
+                            @foreach($popular_posts as $post)
+                                <a href="" class="widget-link"
+                                   class="list-group-item list-group-item-action flex-column align-items-start"
+                                >
+                                    <div class="sidebar-card">
+                                        <img src="" alt="" class="sidebar-card-img">
+                                        <h5 class="sidebar-card-title"> $post->title </h5>
+                                        <small> $post->getPostDate() </small>
+                                        <small>|| <i class="fa fa-eye"></i>i>  $post->views  </small>
+                                    </div>
+                                </a>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="widget">
+                    <h2 class="widget-title">Афиши</h2>
+                    <div class="blog-list-widget">
+                        <div class="list-group">
+                            @foreach($posters as $poster)
+                                <a href="" class="widget-link">
+                                    <div class="sidebar-card">
+                                        <img src="" alt="" class="sidebar-card-img">
+                                        <h5 class="sidebar-card-title"> $poster->title </h5>
+
+                                    </div>
+                                </a>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="widget">
+                    <h2 class="widget-title">Категории</h2>
+                    <div class="link-widget">
+                        <ul>
+                            @foreach($cats as $cat)
+                                <li><a href="#"> $cat->title <span>( $cat->posts_count )</span></a></li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+ 
+    <div class="banners-head-wrapper">
+        <div class="banners-head">
+            <h2>Полезные ссылки</h2>
+        </div>
+    </div>
+    <div class="banners-wrapper">
+        <div class="arrows">
+            <div class="swiper_banners-button-prev"><img src="{% static 'blog/images/icon/free-animated-icon-fast-backward-7740725.png' %}" alt=""></div>
+        </div>
+        <div class="banners">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img class="slide-img-banners" src="{% static 'blog/images/image/banners/Echo_pobedi.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img-banners" src="{% static 'blog/images/image/banners/Gom_region.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img-banners" src="{% static 'blog/images/image/banners/Kolekcia_ubilyarov.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img-banners" src="{% static 'blog/images/image/banners/Pomnu_gorgus.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img-banners" src="{% static 'blog/images/image/banners/Rechitskiy_raion_u_druku.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img-banners" src="{% static 'blog/images/image/banners/Virtual_vistavki.jpg' %}" alt=""></div>
+            </div>
+        </div>
+        <div class="arrows">
+            <div class="swiper_banners-button-next"><img src="{% static 'blog/images/icon/free-animated-icon-fast-forward-7740748.png' %}" alt=""></div>
+        </div>
+    </div> 
+</div>
+
+
+<div class="footer-wrapper">
+    <footer class="footer">
+        <div class="footer-head">
+            <p>Государственное учреждение культуры "Речицкая районная сеть библиотек"</p>
+        </div>
+        <div class="footer-content">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">О библиотеке</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Информационные ресурсы</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Читателям</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-address">
+                <ul>
+                    <li>г.Речица</li>
+                    <li>ул. К.Маркса 9</li>
+                    <li>Абонемент: 5-43-22</li>
+                    <li>Читальный зал: 5-40-68</li>
+                    <li>Эл. почта: rcbs@post.gomel.by</li>
+                </ul>
+            </div>
+            <div class="footer-work-time">
+                <ul>
+                    <li>Режим работы: с 10-00 до 19-00</li>
+                    <li>Ксерокопия: с 8-30 до 19-00</li>
+                    <li>Выходной: суббота</li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="footer-banners">
+            <img src="image/footer-banners/1.jpg" alt="">
+            <img src="image/footer-banners/2.jpg" alt="">
+            <img src="image/footer-banners/3.jpg" alt="">
+            <img src="image/footer-banners/4.jpg" alt="">
+            <img src="image/footer-banners/5.jpg" alt="">
+            <img src="image/footer-banners/6.jpg" alt="">
+            <img src="image/footer-banners/7.jpg" alt="">
+            <img src="image/footer-banners/8.jpg" alt="">
+        </div>
+        <div class="footer-creator">coooll81</div>
+    </footer>
+</div>
+
+
+
+<script src="../../js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script>
+    new Swiper('.swiper', {
+        // Optional parameters
+        // direction: 'vertical',
+        loop: true,
+        slidesPerView: 3,
+        spaceBetween: 20,
+
+        autoplay: {
+            delay: 3000,
+        },
+
+        effect: 'coverflow',
+        coverflowEffect: {
+          rotate: 20,
+          stretch: 50,
+          slideShadows: true,
+        },
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true,
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        // scrollbar: {
+        //     el: '.swiper-scrollbar',
+        // },
+    });
+
+    new Swiper('.banners', {
+        // Optional parameters
+        // direction: 'vertical',
+        loop: true,
+        slidesPerView: 5,
+        spaceBetween: 20,
+
+        autoplay: {
+            delay: 3000,
+        },
+
+        // effect: 'coverflow',
+        // coverflowEffect: {
+        //     rotate: 20,
+        //     stretch: 50,
+        //     slideShadows: true,
+        // },
+
+        // If we need pagination
+        // pagination: {
+        //     el: '.swiper-pagination',
+        //     clickable: true,
+        //     dynamicBullets: true,
+        // },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper_banners-button-next',
+            prevEl: '.swiper_banners-button-prev',
+            clickable: true,
+        },
+
+        // And if we need scrollbar
+        // scrollbar: {
+        //     el: '.swiper-scrollbar',
+        // },
+    });
+</script>
+</body>
+
