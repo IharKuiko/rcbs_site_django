@@ -1,38 +1,7 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 {% load static %}
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'blog/css/normalize.css' %}">
 
-
-    <link href="../../assets/front/css/bootstrap.css" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Magra:wght@400;700&family=Red+Hat+Text:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
-
-
-    <!-- <link rel="stylesheet" href="../../css/style.css"> -->
-<!--    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">-->
-    <link rel="stylesheet" href="{% static 'blog/css/header.css' %}">
-    <link rel="stylesheet" href="{% static 'blog/css/main.css' %}">
-    <link rel="stylesheet" href="{% static 'blog/css/footer.css' %}">
-    <link rel="stylesheet" href="{% static 'blog/css/links.css' %}">
-
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-    />
-
-
-    <title>TEST</title>
-</head>
-
-<body>
-
+{% block nav %}
 <div class="wrapper-header">
     <div class="hamburger">
         <span class="line"></span>
@@ -103,7 +72,9 @@
     </nav>
     
 </div>
+{% endblock %}
 
+{% block content %}
 <div class="main-wrapper">
 
     <main class="main">
@@ -318,135 +289,8 @@
         </div>
     </div> 
 </div>
-
-
-<div class="footer-wrapper">
-    <footer class="footer">
-        <div class="footer-head">
-            <p>Государственное учреждение культуры "Речицкая районная сеть библиотек"</p>
-        </div>
-        <div class="footer-content">
-            <div class="footer-links">
-                <ul>
-                    <li><a href="#">О библиотеке</a></li>
-                    <li><a href="#">Новости</a></li>
-                    <li><a href="#">Информационные ресурсы</a></li>
-                    <li><a href="#">Услуги</a></li>
-                    <li><a href="#">Читателям</a></li>
-                    <li><a href="#">Контакты</a></li>
-                </ul>
-            </div>
-            <div class="footer-address">
-                <ul>
-                    <li>г.Речица</li>
-                    <li>ул. К.Маркса 9</li>
-                    <li>Абонемент: 5-43-22</li>
-                    <li>Читальный зал: 5-40-68</li>
-                    <li>Эл. почта: rcbs@post.gomel.by</li>
-                </ul>
-            </div>
-            <div class="footer-work-time">
-                <ul>
-                    <li>Режим работы: с 10-00 до 19-00</li>
-                    <li>Ксерокопия: с 8-30 до 19-00</li>
-                    <li>Выходной: суббота</li>
-                </ul>
-
-            </div>
-        </div>
-        <div class="footer-banners">
-            <img src="image/footer-banners/1.jpg" alt="">
-            <img src="image/footer-banners/2.jpg" alt="">
-            <img src="image/footer-banners/3.jpg" alt="">
-            <img src="image/footer-banners/4.jpg" alt="">
-            <img src="image/footer-banners/5.jpg" alt="">
-            <img src="image/footer-banners/6.jpg" alt="">
-            <img src="image/footer-banners/7.jpg" alt="">
-            <img src="image/footer-banners/8.jpg" alt="">
-        </div>
-        <div class="footer-creator">coooll81</div>
-    </footer>
-</div>
+{% endblock %}
 
 
 
-<script src="../../js/script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-<script>
-    new Swiper('.swiper', {
-        // Optional parameters
-        // direction: 'vertical',
-        loop: true,
-        slidesPerView: 3,
-        spaceBetween: 20,
-
-        autoplay: {
-            delay: 3000,
-        },
-
-        effect: 'coverflow',
-        coverflowEffect: {
-          rotate: 20,
-          stretch: 50,
-          slideShadows: true,
-        },
-
-        // If we need pagination
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-            dynamicBullets: true,
-        },
-
-        // Navigation arrows
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-
-        // And if we need scrollbar
-        // scrollbar: {
-        //     el: '.swiper-scrollbar',
-        // },
-    });
-
-    new Swiper('.banners', {
-        // Optional parameters
-        // direction: 'vertical',
-        loop: true,
-        slidesPerView: 5,
-        spaceBetween: 20,
-
-        autoplay: {
-            delay: 3000,
-        },
-
-        // effect: 'coverflow',
-        // coverflowEffect: {
-        //     rotate: 20,
-        //     stretch: 50,
-        //     slideShadows: true,
-        // },
-
-        // If we need pagination
-        // pagination: {
-        //     el: '.swiper-pagination',
-        //     clickable: true,
-        //     dynamicBullets: true,
-        // },
-
-        // Navigation arrows
-        navigation: {
-            nextEl: '.swiper_banners-button-next',
-            prevEl: '.swiper_banners-button-prev',
-            clickable: true,
-        },
-
-        // And if we need scrollbar
-        // scrollbar: {
-        //     el: '.swiper-scrollbar',
-        // },
-    });
-</script>
-</body>
 

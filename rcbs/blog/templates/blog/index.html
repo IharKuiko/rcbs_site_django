@@ -1,12 +1,310 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 {% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
-    <title>Title</title>
-</head>
-<body>
-    <h1>Coool</h1>
-</body>
-</html>
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block nav %}
+<div class="wrapper-header">
+    <div class="hamburger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+    </div>
+    
+
+        <header class="header">
+    
+            <div class="logo">
+                <div class="logo-ico">
+                    <a href="#"><img src="{% static 'blog/images/icon/logo.png' %}" alt="logo"></a>
+                </div>
+                <div class="logo-text">
+                    <h1>Государственное учреждение культуры<br/> "Речицкая районная сеть библиотек"</h1>
+                </div>
+            </div>
+            <div class="block">
+                <div class="registration">
+
+                    <div><a href="">Войти</a></div>
+ 
+                    <div><a href="">Регистрация</a></div>
+
+                </div>
+                <form class="form-inline fl" method="get" action="">
+                    <input class="input-search" name="s" class="form-control mr-sm-2 @error('s') is-invalid @enderror" type="text"
+                           placeholder="ПОИСК ПО САЙТУ" required>
+                    <button class="btn-search btn-outline-success my-2 my-sm-0" type="submit">Искать</button>
+                </form>
+            </div>
+        </header>
+
+    
+    <nav>
+        <div class="menu">
+            <ul class="main-menu">
+    
+                <li class="menu-item @if(Request::is('/')) menu-active @endif"><a href="/">Главная</a></li>
+    
+                <li class="menu-item @if(Request::is('/')) menu-active @endif"><a href="/about">О нас</a></li>
+    
+                <li class="menu-item @if(Request::is('/')) menu-active @endif"><a href="">Ресурсы</a></li>
+    
+                <li class="menu-item @if(Request::is('/')) menu-active @endif"><a href="/services">Услуги</a></li>
+    
+                <li class="menu-item @if(Request::is('/')) menu-active @endif"><a
+                        href="">Краеведение</a></li>
+    
+                <li class="menu-item @if(Request::is('/')) menu-active @endif"><a href="/readers">Читателям</a></li>
+    
+                <li class="menu-item @if(Request::is('/')) menu-active @endif"><a href="/siteMap">Карта сайта</a></li>
+    
+            </ul>
+    
+    
+        </div>
+    
+        <style>
+            .fl{
+                display: flex;
+            }
+            .form-inline .form-control.is-invalid {
+                border: 2px solid red;
+            }
+        </style>
+    </nav>
+    
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="main-wrapper">
+
+    <main class="main">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica1.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica2.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica3.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica5.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica6.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica7.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica8.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica9.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica10.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica11.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica12.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica13.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica14.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica15.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica16.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica17.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica18.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img" src="{% static 'blog/images/image/slider/rechica19.jpg' %}" alt=""></div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <div class="swiper-scrollbar"></div>
+        </div> 
+
+        <div class="wrapper-links">
+            <div class="links-container">
+                <ul class="links">
+                    <li class="links-item"><a href="http://86.57.133.109:8080/alis/StartEK/index.php" target="_blank"><img
+                                src="{% static 'blog/images/icon/Links/ЭК 2.png' %}" alt="">
+                            <div>Электорнный каталог</div>
+                        </a></li>
+                    <li class="links-item"><a href=""><img src="{% static 'blog/images/icon/Links/Анонс..png' %}" alt="">
+                            <div>Анонсы мероприятий</div>
+                        </a></li>
+                    <li class="links-item"><a href=""><img src="{% static 'blog/images/icon/Links/В соц. сети.png' %}" alt="">
+                            <div>Библиотеки в социальных медиа</div>
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-content-wrapper">
+            <div class="wrapper-content">
+
+                    <div class="cards">
+                        {% for post in posts %}
+                            <div class="cards__item">
+                                <div class="card">
+                                    {% if post.image %}
+                                        <div class="card__image"><a href="{{ post.get_absolute_url }}" target="_blank"><img src="{{ post.image.url }}" alt=""></a></div>
+                                    {% else %}
+                                        <div class="card__image"><a href="{{ post.get_absolute_url }}" target="_blank"><img src="{% static 'blog/images/no-image.png' %}" alt=""></a></div>
+                                    {% endif %}
+                                    <div class="card__content">
+                                        <div class="card__title"><a href="{{ post.get_absolute_url }}" target="_blank"> {{ post.title }} </a></div>
+                                        <p class="card__text"> {{post.description}}  </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+<!--                            <div class="cards__item">-->
+<!--                                <div class="card">-->
+<!--                                    <div class="card__image"><a href="" target="_blank"><img src="" alt=""></a></div>-->
+<!--                                    <div class="card__content">-->
+<!--                                        <div class="card__title"><a href="" target="_blank"> $post->title </a></div>-->
+<!--                                        <p class="card__text"> $post->description  </p>-->
+
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="cards__item">-->
+<!--                                <div class="card">-->
+<!--                                    <div class="card__image"><a href="" target="_blank"><img src="" alt=""></a></div>-->
+<!--                                    <div class="card__content">-->
+<!--                                        <div class="card__title"><a href="" target="_blank"> $post->title </a></div>-->
+<!--                                        <p class="card__text"> $post->description  </p>-->
+
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="cards__item">-->
+<!--                                <div class="card">-->
+<!--                                    <div class="card__image"><a href="" target="_blank"><img src="" alt=""></a></div>-->
+<!--                                    <div class="card__content">-->
+<!--                                        <div class="card__title"><a href="" target="_blank"> $post->title </a></div>-->
+<!--                                        <p class="card__text"> $post->description  </p>-->
+
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="cards__item">-->
+<!--                                <div class="card">-->
+<!--                                    <div class="card__image"><a href="" target="_blank"><img src="" alt=""></a></div>-->
+<!--                                    <div class="card__content">-->
+<!--                                        <div class="card__title"><a href="" target="_blank"> $post->title </a></div>-->
+<!--                                        <p class="card__text"> $post->description </p>-->
+
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="cards__item">-->
+<!--                                <div class="card">-->
+<!--                                    <div class="card__image"><a href="" target="_blank"><img src="" alt=""></a></div>-->
+<!--                                    <div class="card__content">-->
+<!--                                        <div class="card__title"><a href="" target="_blank"> $post->title </a></div>-->
+<!--                                        <p class="card__text"> $post->description  </p>-->
+
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="cards__item">-->
+<!--                                <div class="card">-->
+<!--                                    <div class="card__image"><a href="" target="_blank"><img src="" alt=""></a></div>-->
+<!--                                    <div class="card__content">-->
+<!--                                        <div class="card__title"><a href="" target="_blank"> $post->title </a></div>-->
+<!--                                        <p class="card__text"> $post->description  </p>-->
+
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+                    </div>
+
+<!--                <hr class="invis">-->
+                <div class="pagination">
+   
+
+                </div>
+<!--                <hr class="invis">-->
+            </div>
+
+            <div class="content-sidebar">
+                <div class="sidebar-banners">
+                    <img src="{% static 'blog/images/image/banner/Флаг_и_герб.jpg' %}" alt="">
+                    <img src="{% static 'blog/images/image/banner/2022_God_history_memory1.jpg' %}" alt="">
+                </div>
+            
+                <div class="widget">
+                    <h2 class="widget-title">Популярные статьи</h2>
+                    <div class="blog-list-widget">
+                        <div class="list-group">
+                            @foreach($popular_posts as $post)
+                                <a href="" class="widget-link"
+                                   class="list-group-item list-group-item-action flex-column align-items-start"
+                                >
+                                    <div class="sidebar-card">
+                                        <img src="" alt="" class="sidebar-card-img">
+                                        <h5 class="sidebar-card-title"> $post->title </h5>
+                                        <small> $post->getPostDate() </small>
+                                        <small>|| <i class="fa fa-eye"></i>i>  $post->views  </small>
+                                    </div>
+                                </a>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="widget">
+                    <h2 class="widget-title">Афиши</h2>
+                    <div class="blog-list-widget">
+                        <div class="list-group">
+                            @foreach($posters as $poster)
+                                <a href="" class="widget-link">
+                                    <div class="sidebar-card">
+                                        <img src="" alt="" class="sidebar-card-img">
+                                        <h5 class="sidebar-card-title"> $poster->title </h5>
+
+                                    </div>
+                                </a>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="widget">
+                    <h2 class="widget-title">Категории</h2>
+                    <div class="link-widget">
+                        <ul>
+                            {% for cat in cats %}
+                                <li><a href="#"> $cat->title <span>( $cat->posts_count )</span></a></li>
+
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+ 
+    <div class="banners-head-wrapper">
+        <div class="banners-head">
+            <h2>Полезные ссылки</h2>
+        </div>
+    </div>
+    <div class="banners-wrapper">
+        <div class="arrows">
+            <div class="swiper_banners-button-prev"><img src="{% static 'blog/images/icon/free-animated-icon-fast-backward-7740725.png' %}" alt=""></div>
+        </div>
+        <div class="banners">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img class="slide-img-banners" src="{% static 'blog/images/image/banners/Echo_pobedi.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img-banners" src="{% static 'blog/images/image/banners/Gom_region.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img-banners" src="{% static 'blog/images/image/banners/Kolekcia_ubilyarov.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img-banners" src="{% static 'blog/images/image/banners/Pomnu_gorgus.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img-banners" src="{% static 'blog/images/image/banners/Rechitskiy_raion_u_druku.jpg' %}" alt=""></div>
+                <div class="swiper-slide"><img class="slide-img-banners" src="{% static 'blog/images/image/banners/Virtual_vistavki.jpg' %}" alt=""></div>
+            </div>
+        </div>
+        <div class="arrows">
+            <div class="swiper_banners-button-next"><img src="{% static 'blog/images/icon/free-animated-icon-fast-forward-7740748.png' %}" alt=""></div>
+        </div>
+    </div> 
+</div>
+{% endblock %}
